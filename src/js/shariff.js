@@ -129,7 +129,7 @@ Shariff.prototype = {
             }
         } else if (typeof data[key] === 'string') {
             return data[key];
-        } 
+        }
         return undefined;
     },
 
@@ -163,7 +163,7 @@ Shariff.prototype = {
     // returns shareCounts of document
     getShares: function() {
         var baseUrl = url.parse(this.options.backendUrl, true);
-        baseUrl.query.url = this.getURL();
+        baseUrl.query.pageUrl = this.getURL();
         delete baseUrl.search;
         return $.getJSON(url.format(baseUrl));
     },
